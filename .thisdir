@@ -1,0 +1,18 @@
+#1714151590
+hi init
+#1714151598
+pipenv install pandas
+#1714151606
+pipenv install fire
+#1714151611
+pipenv run python cli.py inputs
+#1714151657
+rscript script.r
+#1714151795
+just install
+#1714151821
+rscript script.r
+#1714151861
+just run
+#1714152073
+git init
