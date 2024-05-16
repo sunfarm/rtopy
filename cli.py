@@ -2,10 +2,6 @@ import pandas as pd
 import fire
 
 class CLI:
-    def inputs(self):
-        data = pd.DataFrame({'Category': [1, 1, 1, 2, 2, 3, 3, 3, 3]})
-        data.to_csv('inputs.csv', index=False)
-
     def compare(self):
         output_r = pd.read_csv('output_r.csv')
         output_python = pd.read_csv('output_python.csv')
