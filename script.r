@@ -1,10 +1,12 @@
 library(readr)
 
-# Read data
+rle_encode <- function(data) {
+  rle_data <- rle(data)
+  lengths <- rle_data$lengths
+  values <- rle_data$values
+  return(data.frame(Lengths = lengths, Values = values))
+}
+
 data <- read_csv("inputs.csv")
-
-# Transformation (Example: calculate the mean of 'Values')
-mean_values <- mean(data$Values)
-
-# Save output
-write_csv(data.frame(Mean=mean_values), "output_r.csv")
+encoded_data <- rle_encode(data$Category)
+write_csv(encoded_data, "output_r.csv")
